@@ -26,12 +26,6 @@ class Tag(abstract.AbstractBaseModel):
 
     class Meta:
         abstract = True
-        constraints = [
-            UniqueConstraint(
-                Lower('name'),
-                name='%(class)s_name_unique',
-            ),
-        ]
 
     def __str__(self) -> str:
         return f"{self.name}"
@@ -73,14 +67,6 @@ class Museum(abstract.AbstractBaseModel):
     def __str__(self) -> str:
         return f"{self.name}"
 
-
-    class Meta:
-        constraints = [
-            UniqueConstraint(
-                Lower('name'),
-                name='%(class)s_name_unique',
-            ),
-        ]
 
     def __str__(self) -> str:
         return f"{self.name}"
