@@ -1,2 +1,2 @@
-# arosenius
-A Django application for the Arosenius database
+# Arosenius
+A Django application for the arosenius backend and database
