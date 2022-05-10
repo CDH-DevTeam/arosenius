@@ -1,14 +1,14 @@
-# from rest_framework import viewsets
-# from django_filters.rest_framework import DjangoFilterBackend
-# from . import models, serializers, schemas
+from rest_framework import viewsets
+from django_filters.rest_framework import DjangoFilterBackend
+from . import models, serializers, schemas
 
 
-# class ObjectViewSet(viewsets.ModelViewSet):
-#     queryset = models.Object.objects.all()
-#     serializer_class = serializers.ObjectSerializer
-#     filter_backends = [DjangoFilterBackend]
-#     filterset_fields = '__all__'
-#     schema = schemas.MetaDataSchema()
+class ArtifactViewSet(viewsets.ModelViewSet):
+    queryset = models.Artifact.objects.all()
+    serializer_class = serializers.ArtifactSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = '__all__'
+    schema = schemas.MetaDataSchema()
 
 
 # class ImageViewSet(viewsets.ReadOnlyModelViewSet):

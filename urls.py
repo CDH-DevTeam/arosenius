@@ -7,12 +7,7 @@ from . import views
 
 router = routers.DefaultRouter()
 
-router.register(r'api/object', views.ObjectViewSet, basename='artwork')
-router.register(r'api/image', views.ImageViewSet, basename='image')
-router.register(r'api/person', views.PersonViewSet, basename='person')
-router.register(r'api/museum', views.MuseumViewSet, basename='museum')
-router.register(r'api/material', views.MaterialViewSet, basename='material')
-router.register(r'api/tag', views.TagViewSet, basename='tag')
+router.register(r'api/artifact', views.ArtifactViewSet, basename='artifact')
 
 urlpatterns = [
     path('', include(router.urls)),
